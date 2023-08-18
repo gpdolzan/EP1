@@ -1,7 +1,7 @@
 CFLAGS = -Wall -g  # gerar "warnings" detalhados e infos de depuração
 LDLIBS = -lm       # ligar com a biblioteca matemática
 
-objs = main.o floatManager.o
+objs = analise.o floatManager.o
 
 # regra default (primeira regra)
 all: analise
@@ -11,10 +11,10 @@ analise: $(objs)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDLIBS)
 
 # regras de compilação
-main: analise.c FloatType.h
+analise.o: analise.c floatManager.h
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-FloatType.o: FloatType.c FloatType.h
+floatManager.o: floatManager.c floatManager.h
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 # remove arquivos temporários

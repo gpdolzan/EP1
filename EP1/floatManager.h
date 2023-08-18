@@ -13,6 +13,7 @@
 #include <fenv.h>
 #include <stdlib.h>
 #include <float.h>
+#include <stdint.h>
 
 // Create an struct that has a union inside of it with a float and int
 // This way we can access the float as an int and vice-versa
