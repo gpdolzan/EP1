@@ -8,7 +8,6 @@
 #include <stdio.h>
 #include "floatManager.h"
 
-// Input 2.347e-40 * 0.001 + 1.1e+10 - 0.75e-39 / 0.0
 int main(int argc, const char * argv[])
 {
     num_t x1, x2, x3, x4, x5; // Input variables
